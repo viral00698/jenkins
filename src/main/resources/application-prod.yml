@@ -1,0 +1,6 @@
+server:
+  port: 8082
+
+app:
+  prod:
+    confirm: false
