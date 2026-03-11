@@ -1,5 +1,5 @@
 pipeline {
-    agent SpringAgent
+    agent { label 'SpringAgent' }
 
     stages {
         stage('Hello') {
