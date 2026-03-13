@@ -8,7 +8,7 @@ app:
 
 spring:
    datasource:
-      url: jdbc:postgresql://postgres-db:5432/Test
+      url: jdbc:postgresql://localhost:5432/Test
       username: postgres
       password: root
       driver-class-name: org.postgresql.Driver
@@ -23,4 +23,16 @@ spring:
 logging:
   level:
     org.springframework.security: TRACE
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+  endpoint:
+    prometheus:
+      enabled: true
+
+
+    
         

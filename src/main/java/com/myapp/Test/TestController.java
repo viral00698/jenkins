@@ -13,9 +13,4 @@ public class TestController {
 	public String test() {
 		return "Hello I`m Working";
 	}
-
-	@GetMapping("getAll")
-	public String getAll() {
-		return "Hello I`m Working With Jenkins Upgrade";
-	}
 }

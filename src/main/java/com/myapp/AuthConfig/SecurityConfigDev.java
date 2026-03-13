@@ -49,6 +49,7 @@ public class SecurityConfigDev {
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers("/auth/**").permitAll()
                 .requestMatchers("/legion/**").permitAll()
+                .requestMatchers("/actuator/**").permitAll()
                 .requestMatchers("/error").permitAll()
                 .requestMatchers("/api/**").hasAuthority("USER")
                 .anyRequest().authenticated()
