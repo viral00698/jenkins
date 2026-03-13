@@ -1,5 +1,5 @@
 server:
-   port: 8081
+   port: 8083
 
 app:
    allowed-db-hosts:
@@ -20,18 +20,23 @@ spring:
       properties:
          hibernate:
             dialect: org.hibernate.dialect.PostgreSQLDialect
-logging:
-  level:
-    org.springframework.security: TRACE
+#logging:
+#  level:
+#    org.springframework.security: TRACE
 
 management:
   endpoints:
     web:
       exposure:
-        include: health,info,prometheus
-  endpoint:
-    prometheus:
-      enabled: true
+        include: health,prometheus
+
+  tracing:
+    sampling:
+      probability: 1.0
+
+logging:
+  file:
+    name: logs/app.log
 
 
     
